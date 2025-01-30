@@ -1,0 +1,53 @@
+---
+title: "hello-quarto.qmd"
+format: html
+code-fold: true
+toc: true
+editor: visual
+embed-resources: true
+params:
+   state: "Virginia"
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Paramstate {#sec-paramstate}
+
+I used to live in `r params$state`.
+
+```{r}
+toupper(params$state)
+```
+
+"Here" package for subdirectory organization.
+
+Math mode with \$ signs.
+
+$$
+RMSE = \sqrt{\sum}(P_{i}-O_{i})/n
+$$ {#eq-rmse}
+
+$$
+RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^n (y - \hat{y})^2} 
+$$ {#eq-rmse2}
+
+------------------------------------------------------------------------
+
+Quarto docs need a YAML header, code chunks, and ability to render text.
+
+@sec-paramstate introduces Paramstate.
+
+For equations use two dollar signs and end with {#eq-binomial}
+
+@eq-rmse is an important equation.
+
+For tables #tbl-
+
+------------------------------------------------------------------------
+
+Tidy data is an important idea in data science [@wickham2014].
+
+------------------------------------------------------------------------
+
+in pdf format we can do a page break by doing \newpage
